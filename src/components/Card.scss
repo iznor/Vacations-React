@@ -1,0 +1,58 @@
+.card {
+  display: block;
+  width: 293px;
+  height: 261px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0px 1px 10px hsla(0, 0%, 0%, 0.0196);
+
+  &:hover {
+    box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.07);
+  }
+
+  .photo {
+    display: block;
+    background-image: url("https://picsum.photos/300");
+    border-radius: 25px;
+    width: 90%;
+    height: 65%;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .buttons {
+    // position: absolute;
+    display: flex;
+    width: 92%;
+    // justify-self: center;
+    right: 0px;
+    direction: rtl;
+    margin-right: 60px;
+    margin-top: -25px;
+
+    button {
+      border: none;
+      display: flex;
+      background-color: unset;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      right: 0px;
+      background-repeat: no-repeat;
+
+      &:hover {
+        opacity: 0.96;
+      }
+    }
+
+    .edit {
+      // padding-right: 20px;
+      background-image: url("../assets/img/edit-icon.svg");
+      z-index: 1;
+    }
+
+    .delete {
+      background-image: url("../assets/img/delete-icon.svg");
+    }
+  }
+}
