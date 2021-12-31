@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+
+* {
+    font-family: 'Alef', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 618px;
+    height: 552px;
+    background-color: white;
+    border-radius: 15px;
+}

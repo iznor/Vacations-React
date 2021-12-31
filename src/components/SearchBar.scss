@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    width: 387px;
+    height: 52px;
+
+    input {
+        font-family: 'Alef', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 19.15;
+        display: flex;
+        color: #a7a7a7;
+        width: 75%;
+        letter-spacing: 0.3px;
+        padding-left: 47px;
+        height: 90%;
+        border-radius: 50px;
+        border: 0px solid;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../assets/img/search-icon-inline.svg");
+        background-repeat: no-repeat;
+        background-position: 2vh;
+        justify-content: left;
+
+        &::placeholder {
+            color: #a7a7a7;
+        }
+
+        &:focus {
+            outline: none;
+            color: #444444;
+        }
+    }
+
+    .search-button {
+        position: absolute;
+        display: inline-flex;
+        background-image: url('../assets/img/search-icon.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        // background-position: 3.5vh;
+        width: 92px;
+        height: 92px;
+        margin-left: 328px;
+        margin-top: 20px;
+        border: none;
+        background-color: transparent;
+    }
+}
