@@ -7,9 +7,12 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <img src={logo} className="search-bar" alt="search" />
+        <div className="search-bar" alt="search">
+          <input type="text" placeholder="Search by name or location" />
+          <button className="search-button"></button>
+        </div>
       </header>
-      <div className="main">
+      <div className="cards-list">
         <div className="container content">
           {/* {edit} */}
           <Card onClickEdit /*={setEdit}*/ />
@@ -17,7 +20,7 @@ function App() {
           <Card />
           <Card />
         </div>
-        <div className="container actions">B</div>
+        <div className="container actions">LIST SECTION</div>
       </div>
     </div>
   );

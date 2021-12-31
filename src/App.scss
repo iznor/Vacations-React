@@ -9,16 +9,58 @@
 
   .header {
     display: flex;
-    border: 1px solid black;
     color: white;
+    margin-bottom: 30px;
+    margin-top: 30px;
 
     .search-bar {
-      margin-left: 20%;
-      border: 1px red solid;
+      display: flex;
+      align-items: center;
+      margin-left: 10%;
+      width: 387px;
+      height: 52px;
+
+      input {
+        font-family: 'Alef', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 19.15;
+        display: flex;
+        color: #999999;
+        width: 75%;
+        letter-spacing: 0.3px;
+        padding-left: 47px;
+        height: 90%;
+        border-radius: 50px;
+        border: 0px solid;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("./assets/img/search-icon-inline.svg");
+        background-repeat: no-repeat;
+        background-position: 3.5vh;
+        justify-content: left;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .search-button {
+        position: absolute;
+        display: inline-flex;
+        background-image: url('./assets/img/search-icon.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        // background-position: 3.5vh;
+        width: 92px;
+        height: 92px;
+        margin-left: 328px;
+        margin-top: 20px;
+        border: none;
+        background-color: transparent;
+      }
     }
   }
 
-  .main {
+  .cards-list {
     display: flex;
     width: 100%;
     height: 100%;
