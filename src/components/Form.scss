@@ -7,8 +7,75 @@
 .form {
     display: flex;
     flex-direction: column;
-    width: 618px;
+    width: 100%;
     height: 552px;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    background-image: url(../assets/img/form-pic.svg);
+    background-size: 285px 265px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    h1 {
+        color: #000001;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 25px;
+        line-height: 34.05px;
+    }
+
+    label,
+    input {
+        margin-left: 40px;
+        display: flex;
+        width: 85%;
+        justify-content: left;
+    }
+
+    label {
+        font-weight: bold;
+        color: #77787B;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 4px;
+    }
+
+    input {
+        border: none;
+        border-radius: 4px;
+        background-color: #F6F7FB;
+        height: 35px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #353646;
+        font-weight: normal;
+        margin-bottom: 25px;
+        padding-left: 11px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: #afafaf;
+        }
+    }
+
+    .form-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 143px;
+
+        .add-button {
+            background-image: url(../assets/img/add-icon.svg);
+            background-color: transparent;
+            border: none;
+            width: 93px;
+            height: 93px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 6px;
+        }
+    }
 }
