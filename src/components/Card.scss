@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+
 .card {
-  display: block;
+  font-family: 'Alef', sans-serif;
+  display: flex;
+  flex-direction: column;
   width: 293px;
   height: 261px;
   border-radius: 25px;
   background-color: white;
   box-shadow: 0px 1px 10px hsla(0, 0%, 0%, 0.0196);
+  align-items: center;
 
   &:hover {
     box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.07);
@@ -16,28 +21,30 @@
     border-radius: 25px;
     width: 90%;
     height: 65%;
-    margin: auto;
+    // margin: auto;
     margin-top: 10px;
   }
 
   .buttons {
     // position: absolute;
+
     display: flex;
-    width: 92%;
+    width: 85%;
+    // height: 100%;
     // justify-self: center;
-    right: 0px;
     direction: rtl;
-    margin-right: 60px;
-    margin-top: -25px;
+    // margin-right: 60px;
+    margin-top: -20px;
 
     button {
       border: none;
       display: flex;
+      flex-direction: row;
       background-color: unset;
       height: 50px;
       width: 50px;
       border-radius: 50%;
-      right: 0px;
+      margin-left: -10px;
       background-repeat: no-repeat;
 
       &:hover {
@@ -53,6 +60,30 @@
 
     .delete {
       background-image: url("../assets/img/delete-icon.svg");
+      z-index: 1;
     }
+
+  }
+
+  .marker {
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    background-image: url("../assets/img/location-icon.svg");
+    z-index: 1;
+  }
+
+  h4,
+  h5 {
+    margin: 0px;
+    padding: 0;
+    width: 90%;
+    border: 1px solid red;
+    display: flex;
+  }
+
+  h4 {
+    margin-top: -20px;
   }
 }
