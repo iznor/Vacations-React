@@ -4,7 +4,8 @@
     font-family: 'Alef', sans-serif;
 }
 
-.form {
+.form-add,
+.form-edit {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -62,7 +63,8 @@
         }
     }
 
-    .form-button {
+    .buttons {
+
         display: flex;
         justify-content: center;
         margin-top: 143px;
@@ -77,5 +79,28 @@
             background-size: cover;
             margin-left: 6px;
         }
+    }
+}
+
+.form-edit {
+    background-image: none;
+
+    .discard-button,
+    .save-button {
+        background-color: transparent;
+        border: none;
+        width: 93px;
+        height: 93px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 6px;
+    }
+
+    .save-button {
+        background-image: url(../assets/img/confirm-icon.svg);
+    }
+
+    .discard-button {
+        background-image: url(../assets/img/clear-icon.svg);
     }
 }

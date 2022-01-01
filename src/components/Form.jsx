@@ -1,10 +1,26 @@
 import "./Form.scss";
 
-function Form({ onClickEdit }) {
+const add = [
+  {
+    title: "Add a new vacation",
+    buttons: <button className="add-button"></button>,
+  },
+];
+const edit = [
+  {
+    title: "Edit a vacation",
+    buttons: [
+      <button className="discard-button"></button>,
+      <button className="save-button"></button>,
+    ],
+  },
+];
+
+function Form({ onClickAdd, onClickDiscard, onClickSave }) {
   return (
     <>
-      <div class="form">
-        <h1>Add a new vacation</h1>
+      <div class="form-add">
+        <h1>{add.map((e) => e.title)}</h1>
         <form>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" placeholder="Name" />
@@ -14,10 +30,7 @@ function Form({ onClickEdit }) {
           <input type="text" id="price" placeholder="Price" />
           <label htmlFor="image-url">Image url</label>
           <input type="text" id="image-url" placeholder="Image url" />
-          <div className="form-pic"></div>
-          <div className="form-button">
-            <button className="add-button"></button>
-          </div>
+          <div className="buttons">{add.map((e) => e.buttons)}</div>
         </form>
       </div>
     </>
