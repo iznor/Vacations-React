@@ -1,36 +1,55 @@
 import "./Form.scss";
+import { useContext } from "react";
+import { editAtt, addAtt, Context } from "../store";
+function Form() {
+  const { edit, setEdit } = useContext(Context);
 
-const add = [
-  {
-    title: "Add a new vacation",
-    buttons: <button className="add-button"></button>,
-  },
-];
-const edit = [
-  {
-    title: "Edit a vacation",
-    buttons: [
-      <button className="discard-button"></button>,
-      <button className="save-button"></button>,
-    ],
-  },
-];
-
-function Form({ onClickAdd, onClickDiscard, onClickSave }) {
+  const { destination, country, price, imageUrl } = edit || {
+    destination: null,
+    country: null,
+    price: null,
+    imageUrl: null,
+  };
   return (
     <>
-      <div class="form-add">
-        <h1>{add.map((e) => e.title)}</h1>
+      <div className={`form-${edit ? "edit" : "add"}`}>
+        <h1>
+          {edit ? editAtt.map((e) => e.title) : addAtt.map((e) => e.title)}
+        </h1>
         <form>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" placeholder="Name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            defaultValue={destination}
+          />
           <label htmlFor="location">Location</label>
-          <input type="text" id="location" placeholder="Location" />
+          <input
+            type="text"
+            id="location"
+            placeholder="Location"
+            defaultValue={country}
+          />
           <label htmlFor="price">Price</label>
-          <input type="text" id="price" placeholder="Price" />
+          <input
+            type="text"
+            id="price"
+            placeholder="Price"
+            defaultValue={price}
+          />
           <label htmlFor="image-url">Image url</label>
-          <input type="text" id="image-url" placeholder="Image url" />
-          <div className="buttons">{add.map((e) => e.buttons)}</div>
+          <input
+            type="text"
+            id="image-url"
+            placeholder="Image url"
+            defaultValue={imageUrl}
+          />
+          <div className="buttons">
+            {edit
+              ? editAtt.map((e) => e.buttons)
+              : addAtt.map((e) => e.buttons)}
+          </div>
         </form>
       </div>
     </>
