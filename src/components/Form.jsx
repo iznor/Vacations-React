@@ -1,49 +1,75 @@
 import "./Form.scss";
-import { useContext } from "react";
-import { editAtt, addAtt, Context } from "../store";
-function Form() {
-  const { edit, setEdit } = useContext(Context);
+import { lastId } from "../App";
+import { useContext, useState, useEffect } from "react";
+import { editAtt, addAtt, onSubmit, onSave, Context } from "../store";
+const Form = (props) => {
+  const { edit, setEdit, setOrAddCard } = useContext(Context);
+  const [formState, setFormState] = useState({
+    id: "",
+    name: "",
+    location: "",
+    price: "",
+    url: "",
+  });
+  useEffect(() => {
+    setFormState(
+      edit || { id: "", name: "", location: "", price: "", url: "" }
+    );
+  }, [edit]);
 
-  const { destination, country, price, imageUrl } = edit || {
-    destination: null,
-    country: null,
-    price: null,
-    imageUrl: null,
-  };
+  function addVacay(e) {
+    e.preventDefault();
+    setOrAddCard({
+      ...formState,
+      id: edit ? formState.id : lastId + 1,
+    });
+    console.log("dd");
+  }
+
+  function handleChange(e) {
+    setFormState((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value,
+    }));
+  }
   return (
     <>
       <div className={`form-${edit ? "edit" : "add"}`}>
         <h1>
           {edit ? editAtt.map((e) => e.title) : addAtt.map((e) => e.title)}
         </h1>
-        <form>
+        <form onSubmit={addVacay} onReset={() => setEdit(null)}>
           <label htmlFor="name">Name</label>
           <input
             type="text"
             id="name"
             placeholder="Name"
-            defaultValue={destination}
+            value={formState.name}
+            onChange={handleChange}
           />
           <label htmlFor="location">Location</label>
           <input
             type="text"
             id="location"
             placeholder="Location"
-            defaultValue={country}
+            value={formState.location}
+            onChange={handleChange}
           />
           <label htmlFor="price">Price</label>
           <input
             type="text"
             id="price"
             placeholder="Price"
-            defaultValue={price}
+            value={formState.price}
+            onChange={handleChange}
           />
-          <label htmlFor="image-url">Image url</label>
+          <label htmlFor="url">Image url</label>
           <input
             type="text"
-            id="image-url"
+            id="url"
             placeholder="Image url"
-            defaultValue={imageUrl}
+            value={formState.url}
+            onChange={handleChange}
           />
           <div className="buttons">
             {edit
@@ -54,6 +80,6 @@ function Form() {
       </div>
     </>
   );
-}
+};
 
 export default Form;

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Phi Phi Islands",
+        "location": "Thailand",
+        "price": "1480",
+        "url": "https://picsum.photos/300"
+    },
+    {
+        "id": 2,
+        "name": "Rio De Jeneiro",
+        "location": "Brazil",
+        "price": "2430",
+        "url": "https://picsum.photos/300"
+    },
+    {
+        "id": 3,
+        "name": "Panama City",
+        "location": "Panama",
+        "price": "1650",
+        "url": "https://picsum.photos/300"
+    },
+    {
+        "id": 4,
+        "name": "New York",
+        "location": "USA",
+        "price": "1250",
+        "url": "https://picsum.photos/300"
+    }
+]

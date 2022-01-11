@@ -1,11 +1,20 @@
 import "./SearchBar.scss";
 
-function SearchBar({ onClickEdit }) {
+function SearchBar({ handleChange, filter }) {
   return (
     <>
       <div className="search-bar" alt="search">
-        <input type="text" placeholder="Search by name or location" />
-        <button className="search-button"></button>
+        <input
+          type="text"
+          placeholder="Search by name or location"
+          onChange={handleChange}
+          value={filter}
+        />
+        <button
+          type="submit"
+          className="search-button"
+          onSubmit={handleChange}
+        ></button>
       </div>
     </>
   );

@@ -2,33 +2,26 @@ import Form from "./Form.jsx";
 import "./Card.scss";
 import { useContext } from "react";
 import { editAtt, addAtt, Context } from "../store";
-function Card({ onClickEdit, onClickDelete }) {
-  const card = {
-    destination: "Phi Phi Islands",
-    country: "Thailand",
-    price: "$1,480",
-    imageUrl: "https://picsum.photos/300",
-  };
-  const { destination, country, price, imageUrl } = card;
+import { lastId } from "../App.jsx";
+import { data } from "../data/data.json";
+function Card({ id, name, location, price, url, onDeleteClick }) {
   const { edit, setEdit } = useContext(Context);
+
   return (
     <>
       <div className="card">
-        <div
-          className="photo"
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        ></div>
+        <div className="photo" style={{ backgroundImage: `url(${url})` }}></div>
         <div className="buttons">
+          <button className="delete" onClick={() => onDeleteClick(id)}></button>
           <button
-            className="delete"
-            onClick={() => alert("Delete This Card (from .json)")}
+            className="edit"
+            onClick={() => setEdit({ id, name, location, price, url })}
           ></button>
-          <button className="edit" onClick={() => setEdit(card)}></button>
         </div>
-        <h4 className="destination">{destination}</h4>
+        <h4 className="destination">{name}</h4>
         <div className="location">
           <div className="marker"></div>
-          <h5 className="country">{country}</h5>
+          <h5 className="country">{location}</h5>
           <p className="price">{price}</p>
         </div>
       </div>
