@@ -1,30 +1,30 @@
 [
     {
         "id": 1,
-        "name": "Phi Phi Islands",
-        "location": "Thailand",
-        "price": "1480",
-        "url": "https://picsum.photos/300"
+        "name": "Berlin",
+        "location": "Germany",
+        "price": "$1,480",
+        "url": "https://static.jewishnews.co.uk/jewishnews/uploads/2019/10/The-Brandenburg-Gate-icon-of-Berlin-and-Germany-min.jpg"
     },
     {
         "id": 2,
         "name": "Rio De Jeneiro",
         "location": "Brazil",
-        "price": "2430",
-        "url": "https://picsum.photos/300"
+        "price": "$2,430",
+        "url": "https://www.planetware.com/photos-large/BRA/brazil-rio-cristo-redentor.jpg"
     },
     {
         "id": 3,
         "name": "Panama City",
         "location": "Panama",
-        "price": "1650",
-        "url": "https://picsum.photos/300"
+        "price": "$1,650",
+        "url": "https://tourscanner.com/blog/wp-content/uploads/2021/08/fun-things-to-do-in-Panama-City-Panama.jpg"
     },
     {
         "id": 4,
-        "name": "New York",
-        "location": "USA",
-        "price": "1250",
-        "url": "https://picsum.photos/300"
+        "name": "Lisbon",
+        "location": "Portugal",
+        "price": "$1,250",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Docas_de_Lisboa.JPG"
     }
 ]

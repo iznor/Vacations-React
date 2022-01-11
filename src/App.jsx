@@ -32,7 +32,7 @@ const App = (props) => {
   const setOrAddCard = (card) => {
     edit
       ? setCards((prevState) =>
-          prevState.map((e) => (e.id == card.id ? { ...card } : e))
+          prevState.map((e) => (e.id === card.id ? { ...card } : e))
         )
       : setCards((prevState) => [...prevState, card]);
     setEdit(null);
@@ -40,7 +40,7 @@ const App = (props) => {
 
   const deleteCard = (cardId) => {
     setCards((prevState) => {
-      return prevState.filter((card) => card.id != cardId);
+      return prevState.filter((card) => card.id !== cardId);
     });
     setEdit(null);
   };
