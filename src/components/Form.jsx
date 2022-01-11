@@ -23,7 +23,6 @@ const Form = (props) => {
       ...formState,
       id: edit ? formState.id : lastId + 1,
     });
-    console.log("dd");
   }
 
   function handleChange(e) {
