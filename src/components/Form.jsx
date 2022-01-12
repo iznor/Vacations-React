@@ -1,7 +1,7 @@
 import "./Form.scss";
 import { lastId } from "../App";
 import { useContext, useState, useEffect } from "react";
-import { editAtt, addAtt, onSubmit, onSave, Context } from "../store";
+import { editAtt, addAtt, Context } from "../store";
 const Form = (props) => {
   const { edit, setEdit, setOrAddCard } = useContext(Context);
   const [formState, setFormState] = useState({

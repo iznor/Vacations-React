@@ -1,11 +1,8 @@
-import Form from "./Form.jsx";
 import "./Card.scss";
 import { useContext } from "react";
-import { editAtt, addAtt, Context } from "../store";
-import { lastId } from "../App.jsx";
-import { data } from "../data/data.json";
+import { Context } from "../store";
 function Card({ id, name, location, price, url, onDeleteClick }) {
-  const { edit, setEdit } = useContext(Context);
+  const { setEdit } = useContext(Context);
 
   return (
     <>
